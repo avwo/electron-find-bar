@@ -1,30 +1,30 @@
-English | [中文](./README-zh_CN.md)
+[English](./README.md)  | 中文
 
 # find-bar
 [![NPM version](https://img.shields.io/npm/v/find-bar.svg?style=flat-square)](https://npmjs.org/package/find-bar)
 [![License](https://img.shields.io/aur/license/find-bar?style=flat-square)](https://www.npmjs.com/package/find-bar)
 
-This npm package is used to add a find bar to Electron App, and it is very easy to use.
+该 npm 包用来给 Electron 应用添加搜索框，且使用方法很简单。
 
-# Install
+# 安装
 ``` sh
 npm i --save find-bar
 ```
-# Usage
+# 用法
 ``` js
 const { app } = require('electron'); 
 const setFindBar = require('find-bar');
 
-// add find bar to all windows
+// 给应用里面的所有窗口添加搜索框
 app.on('browser-window-created', (_, win) => {
-  // do something...
+  // 可以通过代码按需设置
   setFindBar(win);
 });
 
 ```
-Find bar is implemented through `BrowserWindow`, which is essentially a window object. You can use `win._isFindBar` to determine whether it is a find bar, and you can use `win._hasFindBar` to determine whether the current window is bound to a find bar，and the detailed usage of `setFindBar` is as follows.
+搜索框是通过 `BrowserWindow` 实现的，本质上它也是一个普通的 Window 对象，可以通过 `win._isFindBar` 判断对象是否为自定义搜索框，也可以通过 `win._hasFindBar` 判断窗口是否已挂载搜索框，`setFindBar` 的详细用法如下。
 
-# setFindBar(win[, options])
+# setFindBar
   ``` js
   export interface FindBarOptions {
     left?: number;
@@ -37,11 +37,11 @@ Find bar is implemented through `BrowserWindow`, which is essentially a window o
   export default function(win: any, options?: FindBarOptions): void;
   ```
 
-  # Example
+  # 示例
 
 <img width="1000" alt="Whistle Client" src="https://github.com/avwo/electron-find-bar/assets/11450939/ac5b0474-89e2-446b-ad5e-653e6d6a8c49">
 
-GitHub: https://github.com/avwo/whistle-client
+代码仓库: https://github.com/avwo/whistle-client
 
 # License
 [MIT](./LICENSE)
