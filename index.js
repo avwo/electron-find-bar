@@ -100,11 +100,15 @@ module.exports = (win, options) => {
   const findStop = () => {
     preText = '';
     win.webContents.stopFindInPage('clearSelection');
-    findBar.webContents.send('find-result');
+    if (findBar) {
+      findBar.webContents.send('find-result');
+    }
   };
 
   const hideFindBar = () => {
-    findBar.hide();
+    if (findBar) {
+      findBar.hide();
+    }
     findStop();
   };
   const showFindBar = () => {
@@ -170,10 +174,12 @@ module.exports = (win, options) => {
   win.webContents.on('found-in-page', (_, result) => {
     if (result.finalUpdate && curReqId === result.requestId) {
       preText = result.matches ? curWord : null;
-      findBar.webContents.send('find-result', {
-        activeMatchOrdinal: result.activeMatchOrdinal,
-        matches: result.matches,
-      });
+      if (findBar) {
+        findBar.webContents.send('find-result', {
+          activeMatchOrdinal: result.activeMatchOrdinal,
+          matches: result.matches,
+        });
+      }
     }
   });
   win.on('blur', cleanup);
