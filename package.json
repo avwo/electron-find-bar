@@ -1,6 +1,6 @@
 {
   "name": "find-bar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add a find bar to Electron App",
   "author": "avenwu <avwu@qq.com>",
   "license": "MIT",

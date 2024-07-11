@@ -2,7 +2,7 @@ English | [中文](./README-zh_CN.md)
 
 # find-bar
 [![NPM version](https://img.shields.io/npm/v/find-bar.svg?style=flat-square)](https://npmjs.org/package/find-bar)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://www.npmjs.com/package/find-bar)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://www.npmjs.com/package/find-bar)
 
 This npm package is used to add a find bar to Electron App, and it is very easy to use.
 

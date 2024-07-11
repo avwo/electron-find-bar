@@ -2,7 +2,7 @@
 
 # find-bar
 [![NPM version](https://img.shields.io/npm/v/find-bar.svg?style=flat-square)](https://npmjs.org/package/find-bar)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://www.npmjs.com/package/find-bar)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://www.npmjs.com/package/find-bar)
 
 该 npm 包用来给 Electron 应用添加搜索框，且使用方法很简单。
 
