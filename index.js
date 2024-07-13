@@ -47,6 +47,7 @@ const createFindBar = (win, options, hideFindBar) => {
     movable: false,
     autoHideMenuBar: true,
     frame: false,
+    show: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -54,6 +55,7 @@ const createFindBar = (win, options, hideFindBar) => {
     },
     ...getPosition(win, options),
   });
+  findBar.once('ready-to-show', () => findBar.show());
   const focusInput = () => {
     findBar.webContents.send('find-show');
   };
